@@ -5,9 +5,9 @@ metadata:
     app: spring-petclinic
   name: spring-petclinic
 spec:
-  port:
-    targetPort: 8080-tcp
   to:
     kind: Service
     name: spring-petclinic
     weight: 100
+  tls:
+    termination: edge
